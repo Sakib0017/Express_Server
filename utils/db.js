@@ -5,7 +5,7 @@ const URI = "mongodb+srv://sakib-admin:sakib124000@cluster0.x55l3gi.mongodb.net/
 const connectDb = async () =>{
     try {
         await mongoose.connect(URI);
-        console.log('connection Successfull')
+        console.log('Connection Successfull')
     } catch (error) {
         console.error("Database connection failed");
         process.exit(0);
