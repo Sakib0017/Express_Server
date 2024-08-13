@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const URI = "mongodb+srv://sakib-admin:sakib124000@cluster0.x55l3gi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-const connectDb = async () =>{
+const db = async () =>{
     try {
         await mongoose.connect(URI);
         console.log('Connection Successfull')
@@ -11,4 +11,4 @@ const connectDb = async () =>{
         process.exit(0);
     }
 }
-module.exports = connectDb;
+module.exports = db;
