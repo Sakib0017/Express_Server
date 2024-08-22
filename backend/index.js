@@ -1,7 +1,7 @@
 const express = require("express");
 const app =express();
-const port = process.env.PORT || 3000;
-const connectDb = require("./utils/db")
+const port = process.env.PORT || 3001;
+const connectDb = require("./utils/db");
 app.get("/", (req, res) => {
     res.send("Hello, World")
 })

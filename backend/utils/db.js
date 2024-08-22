@@ -1,10 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const URI = "mongodb+srv://sakib-admin:sakib124000@cluster0.x55l3gi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+require('dotenv').config();
 
+const mongoURI = process.env.MONGO_URI;
 const db = async () =>{
     try {
-        await mongoose.connect(URI);
+        await mongoose.connect(mongoURI);
         console.log('Connection Successfull')
     } catch (error) {
         console.error("Database connection failed");
